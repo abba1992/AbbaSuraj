@@ -2,7 +2,7 @@ import time
 import math
 import pandas as pd
 import numpy as np
-
+#refactoring changes to confirm
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -47,6 +47,7 @@ def get_filters():
         break
     # TO DO: get user input for month (all, january, february, ... , june)
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # while loops to control input by user
     while True:
         mon_wk = input('Would you like to see data by month or week? Type Y/N: ').lower()
         print()
@@ -104,7 +105,7 @@ def get_filters():
             day='all'
             month='all'
             break
-
+#refactoring changes confirmed
     print('-'*40)
     return city, month, day
 
@@ -223,7 +224,7 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
     print()
-
+#try-except clauses to confirm presence of data in some csv files
     try:
         gender = df['Gender'].value_counts()
         print(f"\nThe types of users by gender are given below:\n\n{gender}")
